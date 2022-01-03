@@ -1,4 +1,4 @@
 SELECT id, name
 FROM students
-WHERE cohort_id = 8
+WHERE cohort_id = 1
 ORDER BY name;
