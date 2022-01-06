@@ -20,12 +20,8 @@ WHERE cohorts.name = '${cohort || defaultCohort}'
 ORDER BY teacher;
 `)
 .then(response => {
-  // console.log(response.rows);
   response.rows.forEach(teacher => {
     console.log((`${teacher.cohort}: ${teacher.teacher}`));
   })
-  // response.rows.forEach(user => {
-  //   console.log(`${user.name} has an id of ${user.student_id} and was in the ${user.cohort} cohort`);
-  // })
 })
 .catch(error => console.log('query error:', error.stack));
